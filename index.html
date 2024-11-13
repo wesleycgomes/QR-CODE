@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de QR Code</h1>
+        
+        <!-- Campo para inserir o URL -->
+        <label for="url">Insira o link:</label>
+        <input type="text" id="url" class="input-res" placeholder="Digite o URL aqui">
+
+        <!-- Campo para selecionar o tamanho do QR Code -->
+        <label for="tamanho">Escolha o tamanho:</label>
+        <select id="tamanho">
+            <option value="150x150">Pequeno (150x150)</option>
+            <option value="300x300">Médio (300x300)</option>
+            <option value="500x500">Grande (500x500)</option>
+        </select>
+
+        <!-- Campo para escolher a cor -->
+        <label for="cor">Escolha a cor do QR Code:</label>
+        <input type="color" id="cor" value="#000000">
+
+        <!-- Botão para gerar o QR Code -->
+        <button id="gerar" onclick="geraQrcode()">Gerar QR Code</button>
+
+        <!-- Exibição do QR Code gerado -->
+        <div class="divQrcode">
+            <img id="qrcode" src="" alt="QR Code gerado">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
